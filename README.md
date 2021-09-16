@@ -9,7 +9,7 @@ As etapas descritas abaixo tem por objetivo te guiar na tarefa de clonar e repro
 ### Pré-requisitos 
 
 **Obrigatório**
-* Composser 2
+* Composer 2
 * Laravel 8
 
 **Opcionais**
