@@ -20,8 +20,12 @@ class ProductController extends Controller
   
     public function store(Request $request){
       $product = new Product;
-      $product->titulo = $request->input('titulo');
-      $product->conteudo = $request->input('conteudo');
+      $product->title = $request->input('title');
+      $product->price = $request->input('price');
+      $product->membership_fee = $request->input('membership_fee');
+      $product->relatives = $request->input('relatives');
+      $product->seniors = $request->input('seniors');
+      $product->detail = $request->input('detail');
   
       if( $product->save() ){
         return new ProductResource( $product );
@@ -30,8 +34,12 @@ class ProductController extends Controller
   
      public function update(Request $request){
       $product = Product::findOrFail( $request->id );
-      $product->titulo = $request->input('titulo');
-      $product->conteudo = $request->input('conteudo');
+      $product->title = $request->input('title');
+      $product->price = $request->input('price');
+      $product->membership_fee = $request->input('membership_fee');
+      $product->relatives = $request->input('relatives');
+      $product->seniors = $request->input('seniors');
+      $product->detail = $request->input('detail');
   
       if( $product->save() ){
         return new ProductResource( $product );
